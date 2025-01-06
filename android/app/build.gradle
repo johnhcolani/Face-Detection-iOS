@@ -18,7 +18,9 @@ android {
     kotlinOptions {
         jvmTarget = JavaVersion.VERSION_1_8
     }
-
+    dependencies {
+        implementation 'com.google.mlkit:face-detection:17.1.0'
+    }
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
         applicationId = "com.example.face_detection"
@@ -41,4 +43,9 @@ android {
 
 flutter {
     source = "../.."
+}
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.8.0" // Ensure the Kotlin version matches your setup
+    implementation 'com.google.android.gms:play-services-mlkit-face-detection:16.0.0' // Updated ML Kit dependency
+    implementation 'androidx.multidex:multidex:2.0.1' // For MultiDex support
 }
